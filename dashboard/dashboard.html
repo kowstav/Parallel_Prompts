@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Parallel Prompts — Dashboard</title>
+  <link rel="stylesheet" href="../shared/app.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body class="mode-dashboard">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">P</div>
+      <div>
+        <h1>Parallel Prompts</h1>
+        <p>Drive web LLMs row-by-row · capture responses to CSV</p>
+      </div>
+    </div>
+    <div class="row">
+      <span id="connectionPill"><span class="dot running" style="width:6px;height:6px;"></span> Connected</span>
+    </div>
+  </header>
+
+  <main id="appRoot"></main>
+
+  <script src="../lib/papaparse.min.js"></script>
+  <script src="../shared/llms.js"></script>
+  <script src="../shared/pyodide-bridge.js"></script>
+  <script src="../code-lab/code-lab.js"></script>
+  <script src="../background-jobs/background-jobs.js"></script>
+  <script src="../shared/app.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

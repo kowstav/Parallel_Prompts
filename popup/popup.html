@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Parallel Prompts</title>
+  <link rel="stylesheet" href="../shared/app.css" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body class="mode-popup">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">P</div>
+      <div>
+        <h1>Parallel Prompts</h1>
+        <p>Run CSV prompts on web LLMs</p>
+      </div>
+    </div>
+    <div class="row">
+      <button id="expandBtn" class="ghost icon" title="Open in full window">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2H14v4.5M6.5 14H2V9.5M14 2l-5 5M2 14l5-5"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="appRoot"></main>
+
+  <script src="../lib/papaparse.min.js"></script>
+  <script src="../shared/llms.js"></script>
+  <script src="../shared/app.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

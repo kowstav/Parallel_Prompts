@@ -1,0 +1,65 @@
+/* popup.css — compact 400×600 popup, same Refined Mono system */
+
+html, body {
+  width: 400px;
+  min-height: 480px;
+  max-height: 600px;
+  overflow-x: hidden;
+  background: var(--bg);
+}
+body.mode-popup { padding: 0; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .brand h1 { font-size: 16px; }
+.topbar .brand p  { font-size: 10.5px; }
+.topbar .logo     { width: 28px; height: 28px; font-size: 14px; }
+
+main { padding: 18px 16px 24px; }
+
+/* Compact card sizing */
+.mode-popup .card { padding: 14px; border-radius: var(--r); }
+.mode-popup h2 { font-size: 19px; margin: 0 0 12px; font-family: var(--serif); font-weight: 400; }
+.mode-popup h3 { font-size: 13px; }
+
+/* Modal becomes near-fullscreen in popup mode */
+.mode-popup .modal-backdrop { padding: 8px; }
+.mode-popup .modal { max-width: 100%; max-height: 96vh; border-radius: var(--r-lg); }
+.mode-popup .modal-header,
+.mode-popup .modal-body,
+.mode-popup .modal-footer { padding: 12px 14px; }
+.mode-popup .modal-header h2 { font-size: 17px; }
+
+/* Dense form */
+.mode-popup label > span.label-text { font-size: 11px; }
+.mode-popup input,
+.mode-popup select,
+.mode-popup textarea,
+.mode-popup button { font-size: 12.5px; padding: 8px 10px; }
+
+/* Buttons in popup are slightly smaller */
+.mode-popup button.icon { padding: 6px; width: 28px; height: 28px; }
+
+/* Job card density */
+.mode-popup .job-card { padding: 14px 16px; }
+.mode-popup .job-meta { font-size: 11px; gap: 8px 12px; }
+.mode-popup .job-actions button { padding: 6px 10px; font-size: 11.5px; }
+
+/* CSV preview compact */
+.mode-popup .csv-preview { max-height: 160px; }
+.mode-popup .csv-preview th,
+.mode-popup .csv-preview td { font-size: 11px; padding: 4px 6px; max-width: 140px; }
+
+/* Tabs spacing in popup */
+.mode-popup .tabs { padding: 0; }
+.mode-popup .tabs button { margin-right: 20px; padding: 12px 0; font-size: 12.5px; }
+
+/* Brand sub-elements */
+.mode-popup .new-job-grid { display: flex; flex-direction: column; gap: 12px; }

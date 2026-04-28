@@ -1,0 +1,52 @@
+/* dashboard.css — full-page Refined Mono dashboard */
+
+body.mode-dashboard { min-height: 100vh; background: var(--bg); }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+main {
+  padding: 28px 32px 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.mode-dashboard .modal { max-width: 760px; }
+.mode-dashboard .csv-preview { max-height: 280px; }
+
+/* Two-column layout for new-job form on wide screens */
+.mode-dashboard .new-job-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.mode-dashboard .new-job-grid .full { grid-column: 1 / -1; }
+
+@media (max-width: 720px) {
+  .mode-dashboard .new-job-grid { grid-template-columns: 1fr; }
+}
+
+/* Connection pill in topbar */
+#connectionPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  font-size: 11px;
+  color: var(--text-2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: transparent;
+}
